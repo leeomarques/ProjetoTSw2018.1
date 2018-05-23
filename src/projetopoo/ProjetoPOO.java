@@ -21,6 +21,7 @@ public class ProjetoPOO {
 		c.setNasc("30/10/1990");
 		c.setTelefone("81997724885");
 		
+		
 		PersistenciaCliente pc = new PersistenciaCliente();
 		try {
 			pc.CasdastraCliente(c);
