@@ -1,9 +1,8 @@
 package projetopoo;
 
-import Dados.Dao.PersistenciaCliente;
+import Dados.Dao.PersistenciaFornecedor;
 import Excecoes.ConexaoException;
-import Excecoes.cpfExistenteException;
-import Negocio.ClassesBasicas.Cliente;
+import Negocio.ClassesBasicas.Fornecedor;
 
 public class ProjetoPOO {
 
@@ -12,27 +11,21 @@ public class ProjetoPOO {
 		// TelaAutenticacaoUsuario telaAut = new TelaAutenticacaoUsuario();
 		// telaAut.show();
 
-		Cliente c = new Cliente();
-		c.setNome("Leonardo");
-		c.setSexo("M");
-		c.setCpf("01144511410");
-		c.setEndereco("Avenida Boa Viagem, 1000");
-		c.setEmail("leonardogm16@gmail.com");
-		c.setNasc("30/10/1990");
-		c.setTelefone("81997724885");
-		
-		
-		PersistenciaCliente pc = new PersistenciaCliente();
+		Fornecedor fornecedor = new Fornecedor();
+		fornecedor.setCnpj("1");
+		fornecedor.setRazao("1sadas");
+		fornecedor.setFantasia("dasd");
+		fornecedor.setContato("dasd");
+		fornecedor.setTelefone("123");
+		fornecedor.setEmail("as");
+
+		PersistenciaFornecedor pfadd = new PersistenciaFornecedor();
 		try {
-			pc.CasdastraCliente(c);
+			pfadd.InserirFornecedor(fornecedor);
 		} catch (ConexaoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (cpfExistenteException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-		
 
 	}
 }
